@@ -2,8 +2,8 @@ name: WarFare-Battlefronts-MinecraftPlugin
 version: '0.1'
 main: de.epax.warFareBattlefrontsMinecraftPlugin.WarFareBattlefrontsMinecraftPlugin
 api-version: '1.21'
-authors: [ EPAXGAMING ]
-description: New plugin lol lol
+authors: [ EPAXGAMING ,samsung_9775]
+description: A War Game Plugin
 commands:
   gm:
   gamemode:
