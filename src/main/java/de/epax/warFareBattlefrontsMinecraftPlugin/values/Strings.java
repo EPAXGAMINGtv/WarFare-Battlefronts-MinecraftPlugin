@@ -13,12 +13,11 @@ public class Strings {
     public static final String survivalMode = " You are now in GameMode Survival!";
     public static final String adventureMode = " You are now in GameMode Adventure!";
     public static final String spectatorMode = " You are now in GameMode Spectator!";
-    public static final String notBanned = " this Player is not Banned!";
-    public static final String ban = " Succesfully Banned Player: ";
-    public static final String ban2 = "!";
     public static final String unban = " Succesfully unBanned Player: ";
     public static final String unban2 = "!";
     public static final String nonBannedPlayer = " this Player Is not Banned!";
+    public static final String disabledVanish = " you are now Visible!";
+    public static final String enabeldVanish = " you are now Invisible!";
 
 
     //Usages

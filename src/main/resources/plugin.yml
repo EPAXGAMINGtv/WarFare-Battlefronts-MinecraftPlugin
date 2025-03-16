@@ -9,5 +9,6 @@ commands:
   gamemode:
   fly:
   unban:
-
+  vanish:
+  v:
 
