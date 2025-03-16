@@ -4,3 +4,10 @@ main: de.epax.warFareBattlefrontsMinecraftPlugin.WarFareBattlefrontsMinecraftPlu
 api-version: '1.21'
 authors: [ EPAXGAMING ]
 description: New plugin lol lol
+commands:
+  gm:
+  gamemode:
+  fly:
+  unban:
+    usage: /unban <player>
+
