@@ -1,6 +1,6 @@
 package de.epax.warFareBattlefrontsMinecraftPlugin.essentialsx.commands;
 
-import de.epax.warFareBattlefrontsMinecraftPlugin.values.Strings;
+import de.epax.warFareBattlefrontsMinecraftPlugin.essentialsx.Config.Strings;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -17,34 +17,34 @@ public class Gamemode implements CommandExecutor {
                 if (args.length > 0) {
                     if (args[0].equalsIgnoreCase("0")) {
                         player.setGameMode(GameMode.SURVIVAL);
-                        player.sendMessage(Strings.prefix+ Strings.survivalMode);
+                        player.sendMessage(Strings.getMessage("prefix")+ Strings.getMessage("survival_mode"));
                     } else if (args[0].equalsIgnoreCase("1")) {
                         player.setGameMode(GameMode.CREATIVE);
-                        player.sendMessage(Strings.prefix+ Strings.creativeMode);
+                        player.sendMessage(Strings.getMessage("prefix")+ Strings.getMessage("creative_mode"));
                     } else if (args[0].equalsIgnoreCase("2")) {
                         player.setGameMode(GameMode.ADVENTURE);
-                        player.sendMessage(Strings.prefix+ Strings.adventureMode);
+                        player.sendMessage(Strings.getMessage("prefix")+ Strings.getMessage("adventure_mode"));
                     } else if (args[0].equalsIgnoreCase("3")) {
                         player.setGameMode(GameMode.SPECTATOR);
-                        player.sendMessage(Strings.prefix+ Strings.spectatorMode);
+                        player.sendMessage(Strings.getMessage("prefix")+ Strings.getMessage("spectator_mode"));
                     } if (args[0].equalsIgnoreCase("survival")) {
                         player.setGameMode(GameMode.SURVIVAL);
-                        player.sendMessage(Strings.prefix+Strings.survivalMode);
+                        player.sendMessage(Strings.getMessage("prefix")+ Strings.getMessage("survival_mode"));
                     } else if (args[0].equalsIgnoreCase("creative")) {
                         player.setGameMode(GameMode.CREATIVE);
-                        player.sendMessage(Strings.prefix+Strings.creativeMode);
+                        player.sendMessage(Strings.getMessage("prefix")+ Strings.getMessage("creative_mode"));
                     } else if (args[0].equalsIgnoreCase("adventure")) {
                         player.setGameMode(GameMode.ADVENTURE);
-                        player.sendMessage(Strings.prefix+Strings.adventureMode);
+                        player.sendMessage(Strings.getMessage("prefix")+ Strings.getMessage("adventure_mode"));
                     } else if (args[0].equalsIgnoreCase("spectator")) {
                         player.setGameMode(GameMode.SPECTATOR);
-                        player.sendMessage(Strings.prefix+Strings.spectatorMode);
+                        player.sendMessage(Strings.getMessage("prefix")+ Strings.getMessage("spectator_mode"));
                     }
                 } else {
-                    player.sendMessage(Strings.prefix+ Strings.notAllowed);
+                    player.sendMessage(Strings.getMessage("prefix")+ Strings.getMessage("not_allowed"));
                 }
             } else {
-                sender.sendMessage(Strings.prefix+ Strings.nonPlayer);
+                sender.sendMessage(Strings.getMessage("prefix")+ Strings.getMessage("non_player"));
             }
 
         }

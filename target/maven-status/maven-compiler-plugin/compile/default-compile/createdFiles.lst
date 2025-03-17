@@ -1,8 +1,13 @@
+de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\commands\warp\SetWarpCommand.class
+de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\Config\Strings.class
+de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\commands\Vanish.class
+de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\commands\EnderChest.class
+de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\tabcompleter\UnbanTabCompleter.class
+de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\commands\Gamemode.class
 de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\commands\Fly.class
 de\epax\warFareBattlefrontsMinecraftPlugin\WarFareBattlefrontsMinecraftPlugin.class
 de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\commands\unban.class
+de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\tabcompleter\WarpTabCompleter.class
 de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\tabcompleter\GamemodeTabCompleter.class
-de\epax\warFareBattlefrontsMinecraftPlugin\values\Strings.class
-de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\tabcompleter\UnbanTabCompleter.class
-de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\commands\Gamemode.class
+de\epax\warFareBattlefrontsMinecraftPlugin\essentialsx\commands\warp\WarpCommand.class
 de\epax\warFareBattlefrontsMinecraftPlugin\values\TabCompleterStrings.class

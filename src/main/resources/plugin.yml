@@ -11,4 +11,11 @@ commands:
   unban:
   vanish:
   v:
+  setwarp:
+  warp:
+  ec:
+  enderchest:
+permissions:
+  rank:
+    ec:
 

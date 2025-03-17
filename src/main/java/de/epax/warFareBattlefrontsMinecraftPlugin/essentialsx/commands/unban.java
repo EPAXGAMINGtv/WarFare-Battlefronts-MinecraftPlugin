@@ -1,6 +1,6 @@
 package de.epax.warFareBattlefrontsMinecraftPlugin.essentialsx.commands;
 
-import de.epax.warFareBattlefrontsMinecraftPlugin.values.Strings;
+import de.epax.warFareBattlefrontsMinecraftPlugin.essentialsx.Config.Strings;
 import org.bukkit.BanList;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
@@ -13,18 +13,18 @@ public class unban implements CommandExecutor {
         if (commandSender.isOp()){
             String targetName = args[0];
             if (args.length != 1) {
-                commandSender.sendMessage(Strings.prefix+Strings.unbanUsage);
+                commandSender.sendMessage(Strings.getMessage("prefix")+Strings.getMessage("unban_usage"));
                 return true;
             }
 
             if (!Bukkit.getBanList(BanList.Type.NAME).isBanned(targetName)) {
-                commandSender.sendMessage(Strings.prefix+Strings.nonBannedPlayer);
+                commandSender.sendMessage(Strings.getMessage("prefix")+Strings.getMessage("non_banned_player"));
             }else {
                 Bukkit.getBanList(BanList.Type.NAME).pardon(targetName);
-                commandSender.sendMessage(Strings.prefix+Strings.unban+targetName +Strings.unban2);
+                commandSender.sendMessage(Strings.getMessage("prefix")+targetName +Strings.getMessage("unban"));
             }
         }else {
-            commandSender.sendMessage(Strings.notAllowed);
+            commandSender.sendMessage(Strings.getMessage("prefix")+Strings.getMessage("non_player"));
         }
         return false;
     }

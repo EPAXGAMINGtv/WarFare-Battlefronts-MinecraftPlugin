@@ -1,7 +1,6 @@
 package de.epax.warFareBattlefrontsMinecraftPlugin.essentialsx.commands;
 
-import de.epax.warFareBattlefrontsMinecraftPlugin.values.Strings;
-import org.bukkit.Bukkit;
+import de.epax.warFareBattlefrontsMinecraftPlugin.essentialsx.Config.Strings;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -16,16 +15,16 @@ public class Vanish implements CommandExecutor {
             if (p.isOp()){
                if (p.isInvisible()){
                    p.setInvisible(false);
-                   p.sendMessage(Strings.prefix+Strings.disabledVanish);
+                   p.sendMessage(Strings.getMessage("prefix")+Strings.getMessage("disabled_vanish"));
                }else {
                    p.setInvisible(true);
-                   p.sendMessage(Strings.prefix+Strings.enabeldVanish);
+                   p.sendMessage(Strings.getMessage("prefix")+Strings.getMessage("enabled_vanish"));
                }
             }else {
-                p.sendMessage(Strings.prefix+Strings.notAllowed);
+                p.sendMessage(Strings.getMessage("prefix")+Strings.getMessage("not_allowed"));
             }
         }else {
-            sender.sendMessage(Strings.prefix+Strings.nonPlayer);
+            sender.sendMessage(Strings.getMessage("prefix")+Strings.getMessage("non_player"));
         }
         return false;
     }

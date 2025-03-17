@@ -1,0 +1,43 @@
+messages:
+  #sends
+  prefix: "§cWarFare-Battlefronts§f :"
+  not_allowed: "You don't have permission to do that!"
+  non_player: "You must be a player to do that!"
+  activated_fly: "Flying is now enabled!"
+  deactivated_fly: "Flying is now disabled!"
+  creative_mode: "You are now in Gamemode Creative!"
+  survival_mode: "You are now in Gamemode Survival!"
+  adventure_mode: "You are now in Gamemode Adventure!"
+  spectator_mode: "You are now in Gamemode Spectator!"
+  unban: "Successfully unbanned Player: "
+  non_banned_player: "This player is not banned!"
+  disabled_vanish: "You are now visible!"
+  enabled_vanish: "You are now invisible!"
+  enderchest_open: "You opened your Enderchest!"
+  fly_eror: "You must be in Survival or in Adventure Mode!"
+  offline_player: "this Player is not Online!"
+  opened_enderchest: "you opened the Enderchest from: "
+  only_player_warp: "only Players kann Make a Warp!"
+  warp_name: "you must be create a WarpName !"
+  setted_warp: "you setted the warp :"
+  non_existent_warp: "this warp do not exist"
+  world_not_found: "world not fouded!"
+  succeful_warp_teleport: "succefully teleportet to warp :"
+
+  #usages
+  unban_usage: "Usage: /unban <Player>"
+  warp_usage : "Usage: /warp <Warpname>"
+
+warps:
+  exampleWarp:
+    world: "world"
+    x: 100.0
+    y: 64.0
+    z: 100.0
+    yaw: 0.0
+    pitch: 0.0
+
+
+
+
+
