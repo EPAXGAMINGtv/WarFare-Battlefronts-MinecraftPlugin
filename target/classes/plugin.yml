@@ -15,7 +15,9 @@ commands:
   warp:
   ec:
   enderchest:
+  sethome:
+  home:
+
 permissions:
   rank:
     ec:
-

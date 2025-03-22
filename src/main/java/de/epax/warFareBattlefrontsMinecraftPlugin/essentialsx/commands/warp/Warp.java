@@ -9,12 +9,25 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 
-public class WarpCommand implements CommandExecutor {
-    private final FileConfiguration config;
+import java.io.File;
 
-    public WarpCommand(FileConfiguration config) {
-        this.config = config;
+public class Warp implements CommandExecutor {
+    private final FileConfiguration warpConfig;
+    private final File warpFile;
+
+    public Warp() {
+
+        this.warpFile = new File("plugins/WarFare-Battlefronts-MinecraftPlugin", "warps.yml");
+        if (!warpFile.exists()) {
+            try {
+                warpFile.createNewFile();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        this.warpConfig = YamlConfiguration.loadConfiguration(warpFile);
     }
 
     @Override
@@ -32,17 +45,17 @@ public class WarpCommand implements CommandExecutor {
         }
 
         String warpName = args[0];
-        if (!config.contains("warps." + warpName)) {
+        if (!warpConfig.contains("warps." + warpName)) {
             player.sendMessage(Strings.getMessage("prefix") + Strings.getMessage("non_existent_warp"));
             return false;
         }
 
-        World world = Bukkit.getWorld(config.getString("warps." + warpName + ".world"));
-        double x = config.getDouble("warps." + warpName + ".x");
-        double y = config.getDouble("warps." + warpName + ".y");
-        double z = config.getDouble("warps." + warpName + ".z");
-        float yaw = (float) config.getDouble("warps." + warpName + ".yaw");
-        float pitch = (float) config.getDouble("warps." + warpName + ".pitch");
+        World world = Bukkit.getWorld(warpConfig.getString("warps." + warpName + ".world"));
+        double x = warpConfig.getDouble("warps." + warpName + ".x");
+        double y = warpConfig.getDouble("warps." + warpName + ".y");
+        double z = warpConfig.getDouble("warps." + warpName + ".z");
+        float yaw = (float) warpConfig.getDouble("warps." + warpName + ".yaw");
+        float pitch = (float) warpConfig.getDouble("warps." + warpName + ".pitch");
 
         if (world != null) {
             Location warpLocation = new Location(world, x, y, z, yaw, pitch);
@@ -52,5 +65,14 @@ public class WarpCommand implements CommandExecutor {
             player.sendMessage(Strings.getMessage("prefix") + Strings.getMessage("world_not_found"));
         }
         return true;
+    }
+
+    // Funktion zum Speichern der Warps
+    public void saveWarps() {
+        try {
+            warpConfig.save(warpFile);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

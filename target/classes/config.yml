@@ -24,18 +24,12 @@ messages:
   world_not_found: "world not fouded!"
   succeful_warp_teleport: "succefully teleportet to warp :"
 
+  home_setted : "Succesfully setted home : "
   #usages
   unban_usage: "Usage: /unban <Player>"
   warp_usage : "Usage: /warp <Warpname>"
 
-warps:
-  exampleWarp:
-    world: "world"
-    x: 100.0
-    y: 64.0
-    z: 100.0
-    yaw: 0.0
-    pitch: 0.0
+
 
 
 
